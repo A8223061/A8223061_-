@@ -3,22 +3,27 @@
 #include<iostream>
 using namespace std;
 
-class money {
+class Money {
 private:
 	int commoney;
 	int peomoney;
-
+	int bet;
 public:
-	money();
-
+	Money();
+	Money(int, int, int);
 	void setcommoney(int);
 	void setpeomoney(int);
 
 	int getcommoney();
 	int getpeomoney();
+	int getBet();
 
-	void win(int);
-	void lose(int);
+	int peowin();
+	int peolose();
+	int peodraw();
+
+	int comwin();
+	int comlose();
+	int comdraw();
 };
 #endif 
-

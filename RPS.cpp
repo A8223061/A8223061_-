@@ -1,41 +1,71 @@
 #include"RPS.h"
 
-money::money()
+Money::Money()
 {
-	commoney = 2000;
-	peomoney = 2000;
-
 }
 
-void money::setcommoney(int com)
+Money::Money(int peomoney, int commoney,int bet)
+{
+	this->peomoney = peomoney;
+	this->commoney = commoney;
+	this->bet = bet;
+}
+
+
+
+void Money::setcommoney(int com)
 {
 	commoney = com;
 }
 
-void money::setpeomoney(int peo)
+void Money::setpeomoney(int peo)
 {
 	peomoney = peo;
 }
 
-int money::getcommoney()
+int Money::getcommoney()
 {
 	return commoney;
 }
 
-int money::getpeomoney()
+int Money::getpeomoney()
 {
 	return peomoney;
 }
 
-void money::win(int bet)
+int Money::getBet()
 {
-	commoney - bet;
-	peomoney + bet;
+	return bet;
 }
 
-void money::lose(int bet)
+int Money::peowin()
 {
-	commoney + bet;
-	peomoney - bet;
+	return peomoney += bet;
 }
+
+int Money::peolose()
+{
+	return peomoney -= bet;
+}
+
+int Money::peodraw()
+{
+	return peomoney;
+}
+
+int Money::comwin()
+{
+	return commoney += bet;
+}
+
+int Money::comlose()
+{
+	return commoney -= bet;
+}
+
+int Money::comdraw()
+{
+	return commoney;
+}
+
 
