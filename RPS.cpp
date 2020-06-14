@@ -2,9 +2,13 @@
 
 money::money()
 {
-	commoney = 2000;
-	peomoney = 2000;
 
+}
+
+money::money(int com, int peo)
+{
+	commoney = com;
+	peomoney = peo;
 }
 
 void money::setcommoney(int com)
@@ -29,13 +33,13 @@ int money::getpeomoney()
 
 void money::win(int bet)
 {
-	commoney - bet;
-	peomoney + bet;
+	setcommoney(commoney - bet);
+	setpeomoney(peomoney + bet);
 }
 
 void money::lose(int bet)
 {
-	commoney + bet;
-	peomoney - bet;
+	setcommoney(commoney + bet);
+	setpeomoney(peomoney - bet);
 }
 
