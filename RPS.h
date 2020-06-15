@@ -10,6 +10,7 @@ private:
 
 public:
 	money();
+	money(int, int);
 
 	void setcommoney(int);
 	void setpeomoney(int);
