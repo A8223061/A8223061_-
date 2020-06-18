@@ -7,114 +7,114 @@
 int main() {
 	int a, c = 0, e, f, g = 0, h;
 	string b, d;
-	srand(time(NULL));//³]©wÀH¾÷¶Ã¼Æ//
-	start:
-	money Money(2000, 2000);//ª±®a¥H¤Î¹q¸£ªºÄw½X³£¬O2000//
-	cout << "§Aªº½äª÷ÁÙ¦³:" << Money.getpeomoney() << endl;
-	cout << "¹ï¤èªº½äª÷ÁÙ¦³:" << Money.getcommoney() << endl;
-	while (c != -1 and Money.getcommoney() > 0 and Money.getpeomoney() > 0)/*³]©wÄµ¥Ü­È°j°é¥H¤Î¨¾§b*/{
-		cout << "½Ğ¤Uª`ª÷ÃB:" <<" ";
+	srand(time(NULL));//è¨­å®šéš¨æ©Ÿäº‚æ•¸//
+	start://é€™è£¡è¨­çš„å€åŸŸè®Šæ•¸æ˜¯ç‚ºäº†ç­‰ç­‰è¦åœ¨ä¸€å±€æ™‚å¯ä»¥ç›´æ¥å‘¼å«//
+	money Money(2000, 2000);//ç©å®¶ä»¥åŠé›»è…¦çš„ç±Œç¢¼éƒ½æ˜¯2000//
+	cout << "ä½ çš„è³­é‡‘é‚„æœ‰:" << Money.getpeomoney() << endl;
+	cout << "å°æ–¹çš„è³­é‡‘é‚„æœ‰:" << Money.getcommoney() << endl;
+	while (c != -1 and Money.getcommoney() > 0 and Money.getpeomoney() > 0)/*è¨­å®šè­¦ç¤ºå€¼è¿´åœˆä»¥åŠé˜²å‘†*/{
+		cout << "è«‹ä¸‹æ³¨é‡‘é¡:" <<" ";
 		cin >> g;
-		//¨¾§b³]¸m//
+		//é˜²å‘†è¨­ç½®//
 		if (g >= 0 && g <= Money.getpeomoney()) {
-			cout << "½Ğ¿é¤J¼Æ¦r:(1)°Å¤M,(2)¥ÛÀY,(3)¥¬,(-1)Â÷¶}" << endl;
+			cout << "è«‹è¼¸å…¥æ•¸å­—:(1)å‰ªåˆ€,(2)çŸ³é ­,(3)å¸ƒ,(-1)é›¢é–‹" << endl;
 			cin >> c;
 			if (c == 1 || c == 2 || c == 3) {
 				if (c == 1) {
-					b = "°Å¤M";
-					//³]©w¤@­ÓÅÜ¼Æ ¤è«K§PÂ_¿éÄ¹//
+					b = "å‰ªåˆ€";
+					//è¨­å®šä¸€å€‹è®Šæ•¸ æ–¹ä¾¿åˆ¤æ–·è¼¸è´//
 					e = 1;
 				}
 				else if (c == 2) {
-					b = "¥ÛÀY";
-					//³]©w¤@­ÓÅÜ¼Æ ¤è«K§PÂ_¿éÄ¹//
+					b = "çŸ³é ­";
+					//è¨­å®šä¸€å€‹è®Šæ•¸ æ–¹ä¾¿åˆ¤æ–·è¼¸è´//
 					e = 2;
 				}
 				else {
-					b = "¥¬";
-					//³]©w¤@­ÓÅÜ¼Æ ¤è«K§PÂ_¿éÄ¹//
+					b = "å¸ƒ";
+					//è¨­å®šä¸€å€‹è®Šæ•¸ æ–¹ä¾¿åˆ¤æ–·è¼¸è´//
 					e = 3;
 				}
-				//³]©wa¬°1~3ªº¶Ã¼Æ//
+				//è¨­å®šaç‚º1~3çš„äº‚æ•¸//
 				a = rand() % 3 + 1;
 				if (a == 1) {
-					d = "°Å¤M";
+					d = "å‰ªåˆ€";
 					f = 1;
 				}
 				else if (a == 2) {
-					d = "¥ÛÀY";
+					d = "çŸ³é ­";
 					f = 2;
 				}
 				else {
-					d = "¥¬";
+					d = "å¸ƒ";
 					f = 3;
 				}
-				cout << "§A¥X¤F:" << b << endl;
+				cout << "ä½ å‡ºäº†:" << b << endl;
 				cout << endl;
-				cout << "¹q¸£¥X¤F:" << d << endl;
+				cout << "é›»è…¦å‡ºäº†:" << d << endl;
 				cout << endl;
-				//§PÂ_¿éÄ¹¥H¤Î½äª÷ªºÂà²¾//
+				//åˆ¤æ–·è¼¸è´ä»¥åŠè³­é‡‘çš„è½‰ç§»//
 				if (e - f == 2) {
-					cout << "§A¿é¤F!!¦A±µ¦A¼F:)" << endl;
+					cout << "ä½ è¼¸äº†!!å†æ¥å†å²:)" << endl;
 					cout << endl;
 					Money.lose(g);
-					cout << "§Aªº½äª÷ÁÙ¦³:" << Money.getpeomoney() << endl;
-					cout << "¹ï¤èªº½äª÷ÁÙ¦³:" << Money.getcommoney() << endl;
+					cout << "ä½ çš„è³­é‡‘é‚„æœ‰:" << Money.getpeomoney() << endl;
+					cout << "å°æ–¹çš„è³­é‡‘é‚„æœ‰:" << Money.getcommoney() << endl;
 				}
 				else if (e > f) {
-					cout << "§AÄ¹¤F!!" << endl;
+					cout << "ä½ è´äº†!!" << endl;
 					cout << endl;
 					Money.win(g);
-					cout << "§Aªº½äª÷ÁÙ¦³:" << Money.getpeomoney() << endl;
-					cout << "¹ï¤èªº½äª÷ÁÙ¦³:" << Money.getcommoney() << endl;
+					cout << "ä½ çš„è³­é‡‘é‚„æœ‰:" << Money.getpeomoney() << endl;
+					cout << "å°æ–¹çš„è³­é‡‘é‚„æœ‰:" << Money.getcommoney() << endl;
 				}
 				else if (e == f) {
-					cout << "¥­¤â~¦A¨Ó¤@¦¸§a!" << endl;
+					cout << "å¹³æ‰‹~å†ä¾†ä¸€æ¬¡å§!" << endl;
 					cout << endl;
-					cout << "§Aªº½äª÷ÁÙ¦³:" << Money.getpeomoney() << endl;
-					cout << "¹ï¤èªº½äª÷ÁÙ¦³:" << Money.getcommoney() << endl;
+					cout << "ä½ çš„è³­é‡‘é‚„æœ‰:" << Money.getpeomoney() << endl;
+					cout << "å°æ–¹çš„è³­é‡‘é‚„æœ‰:" << Money.getcommoney() << endl;
 				}
 				else if (e - f == -2) {
-					cout << "§AÄ¹¤F!!" << endl;
+					cout << "ä½ è´äº†!!" << endl;
 					cout << endl;
 					Money.win(g);
-					cout << "§Aªº½äª÷ÁÙ¦³:" << Money.getpeomoney() << endl;
-					cout << "¹ï¤èªº½äª÷ÁÙ¦³:" << Money.getcommoney() << endl;
+					cout << "ä½ çš„è³­é‡‘é‚„æœ‰:" << Money.getpeomoney() << endl;
+					cout << "å°æ–¹çš„è³­é‡‘é‚„æœ‰:" << Money.getcommoney() << endl;
 				}
 				else if (e < f) {
-					cout << "§A¿é¤F!!¦A±µ¦A¼F:)" << endl;
+					cout << "ä½ è¼¸äº†!!å†æ¥å†å²:)" << endl;
 					cout << endl;
 					Money.lose(g);
-					cout << "§Aªº½äª÷ÁÙ¦³:" << Money.getpeomoney() << endl;
-					cout << "¹ï¤èªº½äª÷ÁÙ¦³:" << Money.getcommoney() << endl;
+					cout << "ä½ çš„è³­é‡‘é‚„æœ‰:" << Money.getpeomoney() << endl;
+					cout << "å°æ–¹çš„è³­é‡‘é‚„æœ‰:" << Money.getcommoney() << endl;
 				}
 			}
 			else if (c == -1) {
 				goto end;
 			}
-			//¿é¤J1~3¥H¥~ªº¼Æ¦r´N¦A­«·s¿é¤J¤@¦¸//
+			//è¼¸å…¥1~3ä»¥å¤–çš„æ•¸å­—å°±å†é‡æ–°è¼¸å…¥ä¸€æ¬¡//
 			else
-				cout << "½Ğ¿é¤J1~3ªº¼Æ¦r" << endl;
+				cout << "è«‹è¼¸å…¥1~3çš„æ•¸å­—" << endl;
 		}
 		else
-			cout << "§A¿é¤Jªº½äª`¤£¦A§Aªºª÷ÃB¤º¡A½Ğ­«·s¿é¤J" << endl;
+			cout << "ä½ è¼¸å…¥çš„è³­æ³¨ä¸å†ä½ çš„é‡‘é¡å…§ï¼Œè«‹é‡æ–°è¼¸å…¥" << endl;
 	}
 	if (Money.getpeomoney() > 0)
 	{
-		cout << "®¥³ß§AÄ¹¤F³o§½";
+		cout << "æ­å–œä½ è´äº†é€™å±€";
 	}
 	else
 	{
-		cout << endl << "§A¿é¤F³o§½¡A¤U¦¸¥[ªo" << endl;
+		cout << endl << "ä½ è¼¸äº†é€™å±€ï¼Œä¸‹æ¬¡åŠ æ²¹" << endl;
 	}
-	cout << "(1)¦A¨Ó¤@§½ (-1)Â÷¶}" << endl << "¬O§_¦A¨Ó¤@§½:" << endl;
+	cout << "(1)å†ä¾†ä¸€å±€ (-1)é›¢é–‹" << endl << "æ˜¯å¦å†ä¾†ä¸€å±€:" << endl;
 	cin >> h;
 	if (h == 1)
 		goto start;
 	else if (h == -1)
 		goto end;
-	else
-		cout << "½Ğ¿é¤J1©Î-1";
+	else//é˜²å‘†è¨­è¨ˆ//
+		cout << "è«‹è¼¸å…¥1æˆ–-1";
 end:
 	system("pause");
 	return 0;
