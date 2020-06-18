@@ -22,4 +22,3 @@ public:
 	void lose(int);
 };
 #endif 
-

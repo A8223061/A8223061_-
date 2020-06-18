@@ -42,4 +42,3 @@ void money::lose(int bet)
 	setcommoney(commoney + bet);
 	setpeomoney(peomoney - bet);
 }
-
